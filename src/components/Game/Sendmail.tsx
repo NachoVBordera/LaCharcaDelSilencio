@@ -1,31 +1,33 @@
 import React from "react";
 import ButtonUI from "../UI/Button/ButtonUI";
 import { Page } from "../../../types";
-
+//@ts-nocheck
 interface SenMailProps {
   data: Page;
   changePage: (id: number) => void;
 }
 const Sendmail: React.FC<SenMailProps> = ({ data, changePage }) => {
-  const handlerDeath = async () => {
+  const handlerClick = async () => {
     changePage(15);
-    // await fetch("http://localhost:8080/email/death", { method: "POST" });
-  };
-  const handlerAlive = async () => {
-    changePage(15);
-
-    // await fetch("http://localhost:8080/email/alive", { method: "POST" });
+    //TODO:
+    //dead await fetch("http://localhost:8080/email/death", { method: "POST" });
+    // alive await fetch("http://localhost:8080/email/alive", { method: "POST" });
   };
 
   return (
     <>
-      <div key={data.id} className="buttondiv">
-        <div onClick={() => handlerAlive()}>
-          <ButtonUI text={data.options[0].text} />
-        </div>
-        <div onClick={() => handlerDeath()}>
-          <ButtonUI text={data.options[1].text} />
-        </div>
+      <div className="buttondiv" key={data.options[0].id}>
+        {data.options.map((option) => (
+          <div
+            key={option.id}
+            className="divButtonUI"
+            onClick={() => {
+              handlerClick();
+            }}
+          >
+            <ButtonUI text={option.text} />
+          </div>
+        ))}
       </div>
     </>
   );

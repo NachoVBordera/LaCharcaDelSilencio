@@ -7,7 +7,7 @@ interface InputMailUIProps {
   data: Page;
   changePage: Function;
 }
-//@ts-nocheck
+
 const InputMailUI: React.FC<InputMailUIProps> = ({ data, changePage }) => {
   const [response, setResponse] = useState("");
   const handlerChange = (text: any) => {
@@ -45,8 +45,18 @@ const InputMailUI: React.FC<InputMailUIProps> = ({ data, changePage }) => {
           </div>
         </div>
       </div>
-      <div onClick={() => handlerClick()}>
-        <ButtonUI text={data.options[0].text} />
+      <div className="buttondiv" key={data.options[0].id}>
+        {data.options.map((option) => (
+          <div
+            key={option.id}
+            className="divButtonUI"
+            onClick={() => {
+              handlerClick();
+            }}
+          >
+            <ButtonUI text={option.text} />
+          </div>
+        ))}
       </div>
     </>
   );

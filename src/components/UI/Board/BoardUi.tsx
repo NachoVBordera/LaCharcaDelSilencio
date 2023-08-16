@@ -1,4 +1,4 @@
-import React, { ChildContextProvider, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import "./Board.css";
 interface BoardProps {
   children: ReactNode;
