@@ -1,5 +1,5 @@
 import React from "react";
-import InputMailUI from "../ui/InputMail/InputMailUI";
+import InputMailUI from "../UI/InputMail/InputMailUI";
 import { Page } from "../../../types";
 
 interface SendUserMailProps {
