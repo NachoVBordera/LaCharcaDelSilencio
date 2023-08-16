@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+.Sceendiv1 {
+  margin: 0 auto;
+  width: 100%;
+  height: 26rem;
+  border-bottom: 5px solid black;
+  position: relative;
+}
+
+.Sceendiv2 {
+  height: 25.4rem;
+  border: 5px solid #333333;
+  background-color: #666666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Sceendiv3 {
+  width: 97%;
+  height: 94%;
+  background-color: #333333;
+}
+
+.Sceendiv4 {
+  background-color: #333333;
+  width: 100%;
+  height: 100%;
+  border-bottom: 5px solid #cccccc;
+  border-left: 5px solid #cccccc;
+  border-top: 5px solid #333333;
+  border-right: 5px solid #333333;
+  position: relative;
+}
+
+.Sceendiv5 {
+  background-color: #333333;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden; /* Oculta el contenido que se desborda */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pato1::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 3;
+  background-image: url("../../../assets/pato1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pato2::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 3;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../../assets/pato2.png");
+}
+.pato3::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 8;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../../assets/pato3.png");
+}
+.pato4::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 8;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../../assets/pato4.png");
+}
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.SceenP {
+  margin: 1rem;
+  color: #ff6600;
+  font-family: "VT323", monospace;
+  line-height: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 1;
+}
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* .Sceendiv1 {
+    margin: 0 auto;
+    width: 90vw;
+    height: 25rem;
+    border-bottom: 1px solid #000000;
+
+    position: relative;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.399);
+  }
+
+  .Sceendiv2 {
+    height: 24.5rem;
+    border: 5px solid #333333;
+    background-color: #666666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Sceendiv3 {
+    width: 97%;
+    height: 94%;
+
+    background-color: #333333;
+  }
+
+  .Sceendiv4 {
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+    border-bottom: 5px solid #cccccc;
+    border-left: 5px solid #cccccc;
+    border-top: 5px solid #333333;
+    border-right: 5px solid #333333;
+    position: relative;
+  }
+
+  .Sceendiv5 {
+    background-color: #ff6600;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .SceenP {
+    margin: 1rem;
+    color: #ff6600;
+    font-family: "VT323", monospace;
+    line-height: 1.5rem;
+    font-size: 3rem;
+    text-align: center;
+  } */
+}
+@media (max-width: 767px) {
+  .Sceendiv1 {
+    width: 87vw;
+    height: 29rem;
+    border: 5px solid black;
+    position: relative;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.399);
+  }
+
+  .Sceendiv2 {
+    height: 28.4rem;
+    border: 5px solid #333333;
+    background-color: #666666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Sceendiv3 {
+    width: 93%;
+    height: 92%;
+
+    background-color: #333333;
+  }
+
+  .Sceendiv4 {
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+    border-bottom: 5px solid #cccccc;
+    border-left: 5px solid #cccccc;
+    border-top: 5px solid #333333;
+    border-right: 5px solid #333333;
+    position: relative;
+  }
+
+  .Sceendiv5 {
+    background-color: #333333;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .SceenP {
+    margin: 1rem;
+    color: #ff6600;
+
+    font-family: "VT323", monospace;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
