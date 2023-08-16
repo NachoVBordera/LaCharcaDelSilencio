@@ -2,7 +2,7 @@ import React from "react";
 import "./Screen.css";
 
 interface ScreenProps {
-  text: string;
+  text: String;
   id: number;
 }
 

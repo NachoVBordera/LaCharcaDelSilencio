@@ -1,4 +1,3 @@
-//@ts-nocheck
 import React, { useEffect, useState } from "react";
 import Sendmail from "./Sendmail";
 import SendResponse from "./SendResponse";
@@ -41,8 +40,8 @@ const Game: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    setData(cuento.texts.find((pageData: any) => pageData.id === page));
-  }, [page]);
+    setData(cuento?.texts.find((pageData: any) => pageData.id === page));
+  }, [page, cuento]);
 
   const changePage = (id: number) => {
     setPage(id);
@@ -54,7 +53,7 @@ const Game: React.FC = () => {
         <>
           <Board>
             <Screen
-              text={data.id === 14 ? responseData : data.text}
+              text={data.id === 14 ? responseData!.toString() : data.text}
               id={data.id}
             />
             {data.id === 14 ? (
