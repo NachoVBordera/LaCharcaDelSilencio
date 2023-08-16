@@ -75,5 +75,6 @@
 @media (max-width: 767px) {
   .inputUI1 {
     transform: scale(0.64);
+    width: 100%;
   }
 }

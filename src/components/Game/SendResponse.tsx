@@ -9,7 +9,7 @@ interface SendResponseProps {
 const SendResponse: React.FC<SendResponseProps> = ({ data, changePage }) => {
   return (
     <>
-      <div>
+      <div className="buttondiv">
         <InputResponseUI data={data} changePage={changePage} />
       </div>
     </>

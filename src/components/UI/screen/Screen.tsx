@@ -22,7 +22,11 @@ const Screen: React.FC<ScreenProps> = ({ text, id }) => {
     if (id >= 17) {
       setDuck("pato4");
     }
-    console.log(id);
+
+    const Sceendiv5 = document.querySelector(".Sceendiv5");
+    if (Sceendiv5) {
+      Sceendiv5.scrollTop = 0;
+    }
   }, [id]);
 
   return (
