@@ -1,16 +1,44 @@
+//@ts-nocheck
 import React, { useEffect, useState } from "react";
 import Sendmail from "./Sendmail";
 import SendResponse from "./SendResponse";
 import SendUserMail from "./SendUserMail";
 import { Page } from "../../../types";
-import { cuento, response } from "../../hooks/useData";
 import Screen from "../UI/screen/Screen";
 import ButtonUI from "../UI/Button/ButtonUI";
 import Board from "../UI/Board/BoardUi";
-
+interface ResponseData {
+  text: String;
+}
+interface Cuento {
+  texts: Page[];
+}
 const Game: React.FC = () => {
   const [page, setPage] = useState<number>(1);
   const [data, setData] = useState<Page>();
+  const [cuento, setCuento] = useState<Cuento>();
+  const [responseData, setResponseData] = useState<ResponseData>();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const cuentoResponse = await fetch(
+        "https://la-charca-del-silencio.vercel.app/"
+      ).then((response) => response.json());
+
+      const responseResponse = await fetch(
+        "https://la-charca-del-silencio.vercel.app/response"
+      )
+        .then((data) => data.json())
+        .then((parsedData) => {
+          return parsedData.responses[parsedData.responses.length - 1].text;
+        });
+
+      setCuento(cuentoResponse);
+      setResponseData(responseResponse);
+    };
+
+    fetchData();
+  }, []);
 
   useEffect(() => {
     setData(cuento.texts.find((pageData: any) => pageData.id === page));
@@ -25,7 +53,10 @@ const Game: React.FC = () => {
       {data && (
         <>
           <Board>
-            <Screen text={data.id === 14 ? response : data.text} id={data.id} />
+            <Screen
+              text={data.id === 14 ? responseData : data.text}
+              id={data.id}
+            />
             {data.id === 14 ? (
               <Sendmail data={data} changePage={changePage} />
             ) : data.id === 20 ? (
