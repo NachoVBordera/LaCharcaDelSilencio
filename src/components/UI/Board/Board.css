@@ -1,4 +1,6 @@
 .Board1 {
+  position: sticky;
+  z-index: 1;
   margin: 2rem auto;
   border: 6px solid black;
   max-width: 85rem;

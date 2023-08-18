@@ -34,78 +34,59 @@
   position: relative;
 }
 
-.Sceendiv5 {
+.Sceendiv5pato1 {
   background-color: #333333;
   width: 100%;
   height: 100%;
   position: absolute;
-  overflow: hidden; /* Oculta el contenido que se desborda */
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.pato1::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 0;
-  animation-name: parpadeo;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: 3;
-  background-image: url("../../../assets/pato1.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.pato2::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 0;
-  animation-name: parpadeo;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: 3;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../../../assets/pato2.png");
-}
-.pato3::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 0;
-  animation-name: parpadeo;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: 8;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../../../assets/pato3.png");
-}
+.pato1::after,
+.pato2::after,
+.pato3::after,
 .pato4::after {
   content: "";
   height: 100%;
   width: 100%;
   position: absolute;
   z-index: 0;
-  animation-name: parpadeo;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: 8;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pato1::after {
+  background-image: url("../../../assets/pato1.png");
+}
+.pato2::after {
+  background-image: url("../../../assets/pato2.png");
+}
+.pato3::after {
+  background-image: url("../../../assets/pato3.png");
+}
+
+.pato4::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../../../assets/pato4.png");
 }
 
+.blink {
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 2;
+}
 @keyframes parpadeo {
   0% {
     opacity: 1;

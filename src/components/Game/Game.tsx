@@ -13,7 +13,7 @@ interface Cuento {
   texts: Page[];
 }
 const Game: React.FC = () => {
-  const [page, setPage] = useState<number>(1);
+  const [page, setPage] = useState<number>(0);
   const [data, setData] = useState<Page>();
   const [cuento, setCuento] = useState<Cuento>();
   const [responseData, setResponseData] = useState<ResponseData>();

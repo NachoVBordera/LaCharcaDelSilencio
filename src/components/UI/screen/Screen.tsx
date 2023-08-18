@@ -10,7 +10,9 @@ const Screen: React.FC<ScreenProps> = ({ text, id }) => {
   const [duck, setDuck] = React.useState("");
 
   React.useEffect(() => {
-    if (id >= 1 || id <= 8) {
+    if (id === 0) {
+      setDuck("");
+    } else if (id >= 1 || id <= 8) {
       setDuck("pato1");
     }
     if (id === 9) {
@@ -22,11 +24,7 @@ const Screen: React.FC<ScreenProps> = ({ text, id }) => {
     if (id >= 17) {
       setDuck("pato4");
     }
-
-    const Sceendiv5 = document.querySelector(".Sceendiv5");
-    if (Sceendiv5) {
-      Sceendiv5.scrollTop = 0;
-    }
+    console.log(id);
   }, [id]);
 
   return (
@@ -35,7 +33,7 @@ const Screen: React.FC<ScreenProps> = ({ text, id }) => {
         <div className="Sceendiv2">
           <div className="Sceendiv3">
             <div className="Sceendiv4">
-              <div className={"Sceendiv5 " + duck}>
+              <div className={"Sceendiv5pato1 " + duck}>
                 <p className="SceenP">{text}</p>
               </div>
             </div>
