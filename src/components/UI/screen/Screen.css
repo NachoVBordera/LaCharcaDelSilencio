@@ -39,7 +39,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  overflow: hidden;
+  overflow: scroll;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,61 +108,7 @@
   text-align: center;
   z-index: 1;
 }
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* .Sceendiv1 {
-    margin: 0 auto;
-    width: 90vw;
-    height: 25rem;
-    border-bottom: 1px solid #000000;
 
-    position: relative;
-    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.399);
-  }
-
-  .Sceendiv2 {
-    height: 24.5rem;
-    border: 5px solid #333333;
-    background-color: #666666;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .Sceendiv3 {
-    width: 97%;
-    height: 94%;
-
-    background-color: #333333;
-  }
-
-  .Sceendiv4 {
-    background-color: aliceblue;
-    width: 100%;
-    height: 100%;
-    border-bottom: 5px solid #cccccc;
-    border-left: 5px solid #cccccc;
-    border-top: 5px solid #333333;
-    border-right: 5px solid #333333;
-    position: relative;
-  }
-
-  .Sceendiv5 {
-    background-color: #ff6600;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  }
-
-  .SceenP {
-    margin: 1rem;
-    color: #ff6600;
-    font-family: "VT323", monospace;
-    line-height: 1.5rem;
-    font-size: 3rem;
-    text-align: center;
-  } */
-}
 @media (max-width: 767px) {
   .Sceendiv1 {
     width: 87vw;
@@ -222,11 +168,23 @@
     position: absolute;
     top: 0;
     margin: 2rem 1rem;
-
     color: #ff6600;
     font-family: "VT323", monospace;
     line-height: 1.5rem;
     font-size: 1rem;
     text-align: center;
   }
+}
+
+.Sceendiv5::-webkit-scrollbar-track {
+  background-color: #4c515c;
+}
+
+.Sceendiv5::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--BACKGROUND-COLOR);
+}
+
+.Sceendiv5::-webkit-scrollbar-thumb {
+  background-color: #191717;
 }

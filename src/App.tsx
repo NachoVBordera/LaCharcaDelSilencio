@@ -5,9 +5,7 @@ import Scene from "./components/scene/Scene";
 function App() {
   return (
     <>
-      <Scene>
-        <Game />
-      </Scene>
+      <Game />
     </>
   );
 }

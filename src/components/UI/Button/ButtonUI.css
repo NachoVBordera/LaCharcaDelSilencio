@@ -73,6 +73,12 @@
 }
 
 @media (max-width: 767px) {
+  .divButton5:hover {
+    background-color: #333333;
+    .pButton {
+      color: #ff6600;
+    }
+  }
   .divButton1 {
     transform: scale(0.7);
     width: 20rem;
