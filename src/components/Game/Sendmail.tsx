@@ -7,24 +7,24 @@ interface SenMailProps {
   changePage: (id: number) => void;
 }
 const Sendmail: React.FC<SenMailProps> = ({ data, changePage }) => {
-  const handlerClick = async () => {
+  const handlerClick = async (i: number) => {
     changePage(15);
-    //TODO:
-    //dead
-    await fetch("http://localhost:8080/email/death", { method: "POST" });
-    // alive
-    await fetch("http://localhost:8080/email/alive", { method: "POST" });
+    if (i === 0) {
+      await fetch("http://localhost:8080/email/alive", { method: "POST" });
+    } else {
+      await fetch("http://localhost:8080/email/death", { method: "POST" });
+    }
   };
 
   return (
     <>
       <div className="buttondiv" key={data.options[0].id}>
-        {data.options.map((option) => (
+        {data.options.map((option, i) => (
           <div
             key={option.id}
             className="divButtonUI"
             onClick={() => {
-              handlerClick();
+              handlerClick(i);
             }}
           >
             <ButtonUI text={option.text} />
