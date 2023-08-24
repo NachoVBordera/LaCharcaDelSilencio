@@ -10,8 +10,10 @@ const Sendmail: React.FC<SenMailProps> = ({ data, changePage }) => {
   const handlerClick = async () => {
     changePage(15);
     //TODO:
-    //dead await fetch("http://localhost:8080/email/death", { method: "POST" });
-    // alive await fetch("http://localhost:8080/email/alive", { method: "POST" });
+    //dead
+    await fetch("http://localhost:8080/email/death", { method: "POST" });
+    // alive
+    await fetch("http://localhost:8080/email/alive", { method: "POST" });
   };
 
   return (

@@ -39,48 +39,17 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  overflow: scroll;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.pato1::after,
-.pato2::after,
-.pato3::after,
-.pato4::after {
-  content: "";
-  height: 100%;
-  width: 100%;
+.spanduck {
   position: absolute;
-  z-index: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
-
-.pato1::after {
-  background-image: url("../../../assets/pato1.png");
+.duckImg {
+  width: 20rem;
 }
-.pato2::after {
-  background-image: url("../../../assets/pato2.png");
-}
-.pato3::after {
-  background-image: url("../../../assets/pato3.png");
-}
-
-.pato4::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../../../assets/pato4.png");
-}
-
 .blink {
   animation-name: parpadeo;
   animation-duration: 1s;
@@ -110,11 +79,15 @@
 }
 
 @media (max-width: 767px) {
+  .duckImg {
+    width: 10rem;
+  }
   .Sceendiv1 {
-    width: 87vw;
+    width: 83vw;
     height: 29rem;
     border: 5px solid black;
     position: relative;
+    margin: 0 auto;
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.399);
   }
 
@@ -150,7 +123,7 @@
     max-width: 100%;
     height: 100%;
     position: relative;
-    overflow: scroll;
+    overflow: ;
   }
 
   .pato1::after,
@@ -174,17 +147,21 @@
     font-size: 1rem;
     text-align: center;
   }
+
+  .Sceendiv5pato1 {
+    overflow: scroll;
+  }
 }
 
-.Sceendiv5::-webkit-scrollbar-track {
+.Sceendiv5pato1::-webkit-scrollbar-track {
   background-color: #4c515c;
 }
 
-.Sceendiv5::-webkit-scrollbar {
+.Sceendiv5pato1::-webkit-scrollbar {
   width: 12px;
   background-color: var(--BACKGROUND-COLOR);
 }
 
-.Sceendiv5::-webkit-scrollbar-thumb {
+.Sceendiv5pato1::-webkit-scrollbar-thumb {
   background-color: #191717;
 }
