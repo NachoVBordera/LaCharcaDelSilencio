@@ -9,7 +9,7 @@ interface SendUserMailProps {
 const SendUserMail: React.FC<SendUserMailProps> = ({ data, changePage }) => {
   return (
     <>
-      <div className="buttondiv">
+      <div className="buttondiv response1">
         <InputMailUI data={data} changePage={changePage} />
       </div>
     </>
