@@ -5,7 +5,7 @@ import pato2 from "../../../assets/pato2.png";
 import pato3 from "../../../assets/pato3.png";
 import pato4 from "../../../assets/pato4.png";
 interface ScreenProps {
-  text: string;
+  text: String;
   id: number;
 }
 
