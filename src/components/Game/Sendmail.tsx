@@ -10,9 +10,13 @@ const Sendmail: React.FC<SenMailProps> = ({ data, changePage }) => {
   const handlerClick = async (i: number) => {
     changePage(15);
     if (i === 0) {
-      await fetch("http://localhost:8080/email/alive", { method: "POST" });
+      await fetch("https://la-charca-del-silencio.vercel.app/email/alive", {
+        method: "POST",
+      });
     } else {
-      await fetch("http://localhost:8080/email/death", { method: "POST" });
+      await fetch("https://la-charca-del-silencio.vercel.app/email/death", {
+        method: "POST",
+      });
     }
   };
 

@@ -4,6 +4,7 @@ import pato1 from "../../../assets/pato1.png";
 import pato2 from "../../../assets/pato2.png";
 import pato3 from "../../../assets/pato3.png";
 import pato4 from "../../../assets/pato4.png";
+
 interface ScreenProps {
   text: String;
   id: number;
@@ -26,7 +27,7 @@ const Screen: React.FC<ScreenProps> = ({ text, id }) => {
     if (id === 1 || id === 9 || id === 10 || id === 17) {
       setBlinkClass("blink");
     }
-    // Aplicar "duck" durante 2 segundos y luego limpiarlo
+
     const timeout = setTimeout(() => {
       setBlinkClass("");
     }, 2000);
