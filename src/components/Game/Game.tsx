@@ -6,6 +6,7 @@ import { Page } from "../../../types";
 import Screen from "../UI/screen/Screen";
 import ButtonUI from "../UI/Button/ButtonUI";
 import Board from "../UI/Board/BoardUi";
+import Links from "./fin";
 interface ResponseData {
   text: String;
 }
@@ -62,6 +63,8 @@ const Game: React.FC = () => {
               <SendResponse data={data} changePage={changePage} />
             ) : data.id === 22 ? (
               <SendUserMail data={data} changePage={changePage} />
+            ) : data.id === 23 ? (
+              <Links />
             ) : (
               <div className="buttondiv" key={data.options[0].id}>
                 {data.options.map((option) => (

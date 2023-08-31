@@ -1,7 +1,7 @@
 .Board1 {
   position: sticky;
   z-index: 1;
-  margin: 2rem auto;
+  margin: 1rem auto;
   border: 6px solid black;
   max-width: 85rem;
   height: 55rem;
@@ -69,6 +69,19 @@
     background-color: #444444;
     border: 5px solid black;
     height: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
   }
+}
+
+.Board6::-webkit-scrollbar-track {
+  background-color: #4c515c;
+}
+
+.Board6::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--BACKGROUND-COLOR);
+}
+
+.Board6::-webkit-scrollbar-thumb {
+  background-color: #191717;
 }

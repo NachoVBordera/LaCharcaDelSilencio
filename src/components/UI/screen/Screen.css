@@ -39,48 +39,17 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  overflow: hidden;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.pato1::after,
-.pato2::after,
-.pato3::after,
-.pato4::after {
-  content: "";
-  height: 100%;
-  width: 100%;
+.spanduck {
   position: absolute;
-  z-index: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
-
-.pato1::after {
-  background-image: url("../../../assets/pato1.png");
+.duckImg {
+  width: 20rem;
 }
-.pato2::after {
-  background-image: url("../../../assets/pato2.png");
-}
-.pato3::after {
-  background-image: url("../../../assets/pato3.png");
-}
-
-.pato4::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../../../assets/pato4.png");
-}
-
 .blink {
   animation-name: parpadeo;
   animation-duration: 1s;
@@ -108,67 +77,17 @@
   text-align: center;
   z-index: 1;
 }
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* .Sceendiv1 {
-    margin: 0 auto;
-    width: 90vw;
-    height: 25rem;
-    border-bottom: 1px solid #000000;
 
-    position: relative;
-    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.399);
-  }
-
-  .Sceendiv2 {
-    height: 24.5rem;
-    border: 5px solid #333333;
-    background-color: #666666;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .Sceendiv3 {
-    width: 97%;
-    height: 94%;
-
-    background-color: #333333;
-  }
-
-  .Sceendiv4 {
-    background-color: aliceblue;
-    width: 100%;
-    height: 100%;
-    border-bottom: 5px solid #cccccc;
-    border-left: 5px solid #cccccc;
-    border-top: 5px solid #333333;
-    border-right: 5px solid #333333;
-    position: relative;
-  }
-
-  .Sceendiv5 {
-    background-color: #ff6600;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  }
-
-  .SceenP {
-    margin: 1rem;
-    color: #ff6600;
-    font-family: "VT323", monospace;
-    line-height: 1.5rem;
-    font-size: 3rem;
-    text-align: center;
-  } */
-}
 @media (max-width: 767px) {
+  .duckImg {
+    width: 10rem;
+  }
   .Sceendiv1 {
-    width: 87vw;
+    width: 83vw;
     height: 29rem;
     border: 5px solid black;
     position: relative;
+    margin: 0 auto;
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.399);
   }
 
@@ -204,7 +123,7 @@
     max-width: 100%;
     height: 100%;
     position: relative;
-    overflow: scroll;
+    overflow: ;
   }
 
   .pato1::after,
@@ -222,11 +141,27 @@
     position: absolute;
     top: 0;
     margin: 2rem 1rem;
-
     color: #ff6600;
     font-family: "VT323", monospace;
     line-height: 1.5rem;
     font-size: 1rem;
     text-align: center;
   }
+
+  .Sceendiv5pato1 {
+    overflow: scroll;
+  }
+}
+
+.Sceendiv5pato1::-webkit-scrollbar-track {
+  background-color: #4c515c;
+}
+
+.Sceendiv5pato1::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--BACKGROUND-COLOR);
+}
+
+.Sceendiv5pato1::-webkit-scrollbar-thumb {
+  background-color: #191717;
 }
