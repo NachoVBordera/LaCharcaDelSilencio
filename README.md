@@ -1,4 +1,4 @@
-# La charca de los patos
+# La charca del silencio
 
 Este es un proyecto desarroyado para la KuroJam.
 
